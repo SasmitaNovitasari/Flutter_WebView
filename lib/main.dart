@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:webview_flutter/webview_flutter.dart';
 
 
@@ -28,14 +29,14 @@ class MyWebView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String url = "https://www.google.com";
     return SafeArea(
         child: Scaffold(
           body: Column(
             children: [
               Expanded(
                 child: WebView(
-                  // initialUrl: 'http://103.179.57.101:3000',
-                  initialUrl: 'http://103.179.57.101:3000',
+                  initialUrl: url,
                   javascriptMode: JavascriptMode.unrestricted,
                 ),
               ),
